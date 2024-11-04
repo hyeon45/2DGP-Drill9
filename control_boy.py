@@ -26,12 +26,16 @@ def reset_world():
     global boy
 
     running = True
+    depth = 0
 
-    grass = Grass()
+    grass = Grass(400, 30)
+    game_world.add_object(grass, 1)
+
+    grass = Grass(400, 50)
     game_world.add_object(grass, 0)
 
     boy = Boy()
-    game_world.add_object(boy, 1)
+    game_world.add_object(boy, 0)
 
 
 def update_world():
